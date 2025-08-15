@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第五课：语言学习 - CS 入门指南</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .lesson-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+        
+        .lesson-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .lesson-hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .lesson-content {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .lesson-section {
+            margin-bottom: 3rem;
+        }
+        
+        .lesson-section h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #2d3748;
+            border-left: 4px solid #667eea;
+            padding-left: 1rem;
+        }
+        
+        .lesson-section p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+        
+        .lesson-section ul, .lesson-section ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .lesson-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+            color: #4a5568;
+        }
+        
+        .lesson-section a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .lesson-section a:hover {
+            text-decoration: underline;
+        }
+        
+        .lesson-navigation {
+            background: #f8fafc;
+            padding: 40px 0;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            max-width: 600px;
+            margin: 0 auto;
+            gap: 1rem;
+        }
+        
+        .nav-btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-btn.prev {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+        
+        .nav-btn.next {
+            background: #667eea;
+            color: white;
+        }
+        
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .back-to-home {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .back-to-home a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .back-to-home a:hover {
+            text-decoration: underline;
+        }
+        
+        .video-highlight {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            color: #2d3748;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .video-highlight h3 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+        
+        .video-highlight .video-link {
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .video-highlight .video-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .lesson-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>CS 入门指南</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">首页</a>
+                <a href="../index.html#courses" class="nav-link">课程</a>
+                <a href="../index.html#about" class="nav-link">关于</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 课程英雄区域 -->
+    <section class="lesson-hero">
+        <div class="container">
+            <h1>第五课：语言学习</h1>
+            <p>程序员最应该学习的语言是什么？No, it should be English.</p>
+        </div>
+    </section>
+
+    <!-- 课程内容 -->
+    <section class="lesson-content">
+        <div class="container">
+            <!-- 返回首页链接 -->
+            <div class="back-to-home">
+                <a href="../index.html">
+                    <i class="fas fa-arrow-left"></i>
+                    返回课程列表
+                </a>
+            </div>
+            
+            <!-- 课程概述 -->
+            <div class="lesson-section">
+                <h2>课程概述</h2>
+                <p>很多同学可能会问：程序员最应该学习的语言是什么？是 Python、Java、C++ 还是其他编程语言？</p>
+                <p>答案是：<strong>英语</strong>。</p>
+                <p>在计算机科学领域，英语不仅仅是一门语言，更是获取知识、解决问题、跟上技术发展的关键工具。掌握英语，你将能够访问全球最优质的学习资源和技术社区。</p>
+            </div>
+            
+            <!-- 推荐视频 -->
+            <div class="lesson-section">
+                <h2>强烈推荐观看</h2>
+                <div class="video-highlight">
+                    <h3><i class="fas fa-play-circle"></i> 英语才是最好的计算机语言</h3>
+                    <p>这个视频详细解释了为什么英语对程序员如此重要，以及如何通过英语学习提升技术水平。</p>
+                    <a href="https://www.bilibili.com/video/BV17N4y1p7rB/?spm_id_from=333.337.search-card.all.click&vd_source=72297e320b9c9f2a8ce440eed8f502e0" target="_blank" class="video-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        观看视频
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 为什么英语重要 -->
+            <div class="lesson-section">
+                <h2>为什么英语如此重要？</h2>
+                <h3>1. 获取全面的资源和解决方案</h3>
+                <ul>
+                    <li><strong>寻找答案效率高：</strong>英语社区提供海量可靠解决方案，避免中文搜索引擎的低质量内容</li>
+                    <li><strong>专业问答平台：</strong>Stack Overflow 等网站解决大部分技术问题</li>
+                    <li><strong>官方论坛支持：</strong>小众技术可在官方论坛找到答案</li>
+                    <li><strong>直接沟通：</strong>通过 GitHub Issues 或 Discord 联系技术作者</li>
+                </ul>
+                
+                <h3>2. 紧跟技术发展的步伐</h3>
+                <ul>
+                    <li><strong>技术源头：</strong>绝大部分技术创新来自英语社区</li>
+                    <li><strong>及时准确：</strong>避免滞后和错误的翻译信息</li>
+                </ul>
+                
+                <h3>3. 促进职业发展</h3>
+                <ul>
+                    <li><strong>打破工作循环：</strong>避免陷入低级代码编写的死循环</li>
+                    <li><strong>职业晋升：</strong>通过全球经验获得领导信任，实现成长</li>
+                </ul>
+            </div>
+            
+            <!-- 结论 -->
+            <div class="lesson-section">
+                <h2>结论</h2>
+                <p><strong>学习英语是提升技术能力、跟上全球发展、实现职业成长的必由之路。</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 课程导航 -->
+    <section class="lesson-navigation">
+        <div class="container">
+            <div class="nav-buttons">
+                <a href="lesson4.html" class="nav-btn prev">
+                    <i class="fas fa-arrow-left"></i>
+                    上一课：定向学习优质 CS 课程
+                </a>
+                <a href="lesson6.html" class="nav-btn next">
+                    下一课：算法刷题
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 CS 入门指南. 本指南将持续更新，欢迎关注和分享给更多需要的同学。</p>
+            <p><i class="fas fa-heart"></i> 祝你在 CS 的学习道路上越走越远！</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html> 

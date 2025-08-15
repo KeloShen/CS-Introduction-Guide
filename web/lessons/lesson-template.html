@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程标题 - CS 入门指南</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 课程页面专用样式 */
+        .lesson-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+        
+        .lesson-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .lesson-hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .lesson-content {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .lesson-section {
+            margin-bottom: 3rem;
+        }
+        
+        .lesson-section h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #2d3748;
+            border-left: 4px solid #667eea;
+            padding-left: 1rem;
+        }
+        
+        .lesson-section h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+        
+        .lesson-section p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+        
+        .lesson-section ul, .lesson-section ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .lesson-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+            color: #4a5568;
+        }
+        
+        .lesson-section a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .lesson-section a:hover {
+            text-decoration: underline;
+        }
+        
+        .lesson-navigation {
+            background: #f8fafc;
+            padding: 40px 0;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            max-width: 600px;
+            margin: 0 auto;
+            gap: 1rem;
+        }
+        
+        .nav-btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-btn.prev {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+        
+        .nav-btn.next {
+            background: #667eea;
+            color: white;
+        }
+        
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .back-to-home {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .back-to-home a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .back-to-home a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .lesson-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>CS 入门指南</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">首页</a>
+                <a href="../index.html#courses" class="nav-link">课程</a>
+                <a href="../index.html#about" class="nav-link">关于</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 课程英雄区域 -->
+    <section class="lesson-hero">
+        <div class="container">
+            <h1>课程标题</h1>
+            <p>课程简介描述</p>
+        </div>
+    </section>
+
+    <!-- 课程内容 -->
+    <section class="lesson-content">
+        <div class="container">
+            <!-- 返回首页链接 -->
+            <div class="back-to-home">
+                <a href="../index.html">
+                    <i class="fas fa-arrow-left"></i>
+                    返回课程列表
+                </a>
+            </div>
+            
+            <!-- 课程内容区域 -->
+            <div class="lesson-section">
+                <h2>课程概述</h2>
+                <p>这里是课程内容的详细描述...</p>
+            </div>
+            
+            <!-- 更多课程章节 -->
+        </div>
+    </section>
+
+    <!-- 课程导航 -->
+    <section class="lesson-navigation">
+        <div class="container">
+            <div class="nav-buttons">
+                <a href="#" class="nav-btn prev">
+                    <i class="fas fa-arrow-left"></i>
+                    上一课
+                </a>
+                <a href="#" class="nav-btn next">
+                    下一课
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 CS 入门指南. 本指南将持续更新，欢迎关注和分享给更多需要的同学。</p>
+            <p><i class="fas fa-heart"></i> 祝你在 CS 的学习道路上越走越远！</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html> 

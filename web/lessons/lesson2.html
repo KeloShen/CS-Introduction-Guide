@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二课：认清大学，认清自己 - CS 入门指南</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .lesson-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+        
+        .lesson-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .lesson-hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .lesson-content {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .lesson-section {
+            margin-bottom: 3rem;
+        }
+        
+        .lesson-section h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #2d3748;
+            border-left: 4px solid #667eea;
+            padding-left: 1rem;
+        }
+        
+        .lesson-section h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+        
+        .lesson-section p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+        
+        .lesson-section ul, .lesson-section ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .lesson-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+            color: #4a5568;
+        }
+        
+        .lesson-section a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .lesson-section a:hover {
+            text-decoration: underline;
+        }
+        
+        .lesson-navigation {
+            background: #f8fafc;
+            padding: 40px 0;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            max-width: 600px;
+            margin: 0 auto;
+            gap: 1rem;
+        }
+        
+        .nav-btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-btn.prev {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+        
+        .nav-btn.next {
+            background: #667eea;
+            color: white;
+        }
+        
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .back-to-home {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .back-to-home a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .back-to-home a:hover {
+            text-decoration: underline;
+        }
+        
+        .book-highlight {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .book-highlight h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .book-highlight .book-link {
+            background: white;
+            color: #f5576c;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .book-highlight .book-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .benefit-item {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+            text-align: center;
+        }
+        
+        .benefit-item i {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .benefit-item h4 {
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .benefit-item p {
+            color: #4a5568;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
+        .warning-box {
+            background: #fff5f5;
+            border: 1px solid #fed7d7;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .warning-box h4 {
+            color: #c53030;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .warning-box p {
+            color: #742a2a;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .lesson-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>CS 入门指南</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">首页</a>
+                <a href="../index.html#courses" class="nav-link">课程</a>
+                <a href="../index.html#about" class="nav-link">关于</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 课程英雄区域 -->
+    <section class="lesson-hero">
+        <div class="container">
+            <h1>第二课：认清大学，认清自己</h1>
+            <p>大学是人生的重要转折点，学会适应大学生活，早日脱离高中思维，为自己的人生负责。</p>
+        </div>
+    </section>
+
+    <!-- 课程内容 -->
+    <section class="lesson-content">
+        <div class="container">
+            <!-- 返回首页链接 -->
+            <div class="back-to-home">
+                <a href="../index.html">
+                    <i class="fas fa-arrow-left"></i>
+                    返回课程列表
+                </a>
+            </div>
+            
+            <!-- 课程概述 -->
+            <div class="lesson-section">
+                <h2>课程概述</h2>
+                <p>进入大学后，很多同学会发现大学生活与高中生活有着本质的区别。高中时，老师会告诉你学什么、怎么学，家长会督促你学习，整个学习过程都有明确的目标和路径。</p>
+                <p>但大学不同，你需要学会自主学习，为自己的人生负责。本课程将帮助你认清大学的本质，了解如何更好地适应大学生活。</p>
+            </div>
+            
+            <!-- 推荐阅读 -->
+            <div class="lesson-section">
+                <h2>强烈推荐阅读</h2>
+                <div class="book-highlight">
+                    <h3><i class="fas fa-book"></i> 上海交通大学学生生存手册</h3>
+                    <p>这本开源书籍由多名上海交通大学的学生编写而成，深刻揭示了当今本科教育的现状，帮助你早日脱离高中的学生思维。</p>
+                    <a href="https://survivesjtu.gitbook.io/survivesjtumanual" target="_blank" class="book-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        立即阅读
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 这本书能帮助你 -->
+            <div class="lesson-section">
+                <h2>这本书能帮助你：</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-brain"></i>
+                        <h4>脱离高中思维</h4>
+                        <p>了解大学与高中的本质区别，学会独立思考</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-user-graduate"></i>
+                        <h4>学会为自己负责</h4>
+                        <p>从被动学习转向主动学习，掌握自己的学习节奏</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-home"></i>
+                        <h4>适应大学生活</h4>
+                        <p>了解大学生活的方方面面，快速融入新环境</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>获得实用建议</h4>
+                        <p>从学长学姐的经验中学习，避免走弯路</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 为什么需要这本书 -->
+            <div class="lesson-section">
+                <h2>为什么需要这本书？</h2>
+                <p>很多同学进入大学后会遇到以下问题：</p>
+                <ul>
+                    <li><strong>信息不对称：</strong>学校不会告诉你所有需要知道的事情</li>
+                    <li><strong>经验缺失：</strong>没有经历过大学生活，不知道如何规划</li>
+                    <li><strong>目标模糊：</strong>不清楚大学应该学什么，怎么学</li>
+                    <li><strong>资源浪费：</strong>错过了很多宝贵的学习和发展机会</li>
+                </ul>
+                <p>这本书汇集了众多学长学姐的经验和教训，能够帮助你少走弯路，更好地规划大学生活。</p>
+            </div>
+            
+            <!-- 使用建议 -->
+            <div class="lesson-section">
+                <h2>使用建议</h2>
+                <div class="warning-box">
+                    <h4><i class="fas fa-exclamation-triangle"></i> 重要提醒</h4>
+                    <p>每一篇文章都建议仔细研读，如果可以的话，也分享给你的家长。让家长了解大学的真实情况，有助于家庭关系的和谐。</p>
+                </div>
+                <ul>
+                    <li><strong>系统阅读：</strong>从头到尾完整阅读，不要跳章节</li>
+                    <li><strong>做笔记：</strong>记录重要的观点和建议</li>
+                    <li><strong>实践应用：</strong>将书中的建议应用到实际生活中</li>
+                    <li><strong>分享交流：</strong>与同学讨论书中的观点，加深理解</li>
+                </ul>
+            </div>
+            
+            <!-- 下一步 -->
+            <div class="lesson-section">
+                <h2>下一步</h2>
+                <p>阅读完这本书后，你应该能够：</p>
+                <ul>
+                    <li>清楚地了解大学与高中的区别</li>
+                    <li>学会如何规划自己的大学生活</li>
+                    <li>掌握一些实用的学习和生活技巧</li>
+                    <li>建立正确的学习态度和价值观</li>
+                </ul>
+                <p>接下来，你就可以开始学习具体的CS技能了。记住，大学四年是人生中最重要的时光之一，好好珍惜，努力学习！</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 课程导航 -->
+    <section class="lesson-navigation">
+        <div class="container">
+            <div class="nav-buttons">
+                <a href="lesson1.html" class="nav-btn prev">
+                    <i class="fas fa-arrow-left"></i>
+                    上一课：科学上网
+                </a>
+                <a href="lesson3.html" class="nav-btn next">
+                    下一课：CS 基础知识
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 CS 入门指南. 本指南将持续更新，欢迎关注和分享给更多需要的同学。</p>
+            <p><i class="fas fa-heart"></i> 祝你在 CS 的学习道路上越走越远！</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html> 

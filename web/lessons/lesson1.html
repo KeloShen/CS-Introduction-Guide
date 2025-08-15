@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一课：科学上网 - CS 入门指南</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .lesson-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+        
+        .lesson-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .lesson-hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .lesson-content {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .lesson-section {
+            margin-bottom: 3rem;
+        }
+        
+        .lesson-section h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #2d3748;
+            border-left: 4px solid #667eea;
+            padding-left: 1rem;
+        }
+        
+        .lesson-section h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+        
+        .lesson-section p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+        
+        .lesson-section ul, .lesson-section ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .lesson-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+            color: #4a5568;
+        }
+        
+        .lesson-section a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .lesson-section a:hover {
+            text-decoration: underline;
+        }
+        
+        .lesson-navigation {
+            background: #f8fafc;
+            padding: 40px 0;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            max-width: 600px;
+            margin: 0 auto;
+            gap: 1rem;
+        }
+        
+        .nav-btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-btn.prev {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+        
+        .nav-btn.next {
+            background: #667eea;
+            color: white;
+        }
+        
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .back-to-home {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .back-to-home a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .back-to-home a:hover {
+            text-decoration: underline;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-item {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .feature-item h4 {
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .feature-item p {
+            color: #4a5568;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
+        .steps-list {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .steps-list h3 {
+            margin-bottom: 1.5rem;
+            color: #2d3748;
+        }
+        
+        .steps-list ol {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .steps-list li {
+            counter-increment: step-counter;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: relative;
+            padding-left: 3rem;
+        }
+        
+        .steps-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #667eea;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .lesson-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>CS 入门指南</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">首页</a>
+                <a href="../index.html#courses" class="nav-link">课程</a>
+                <a href="../index.html#about" class="nav-link">关于</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 课程英雄区域 -->
+    <section class="lesson-hero">
+        <div class="container">
+            <h1>第一课：科学上网</h1>
+            <p>科学上网是探索优质学习资源、与国际接轨的重要技能。掌握科学上网后，你将能够访问全球最优质的学习资源。</p>
+        </div>
+    </section>
+
+    <!-- 课程内容 -->
+    <section class="lesson-content">
+        <div class="container">
+            <!-- 返回首页链接 -->
+            <div class="back-to-home">
+                <a href="../index.html">
+                    <i class="fas fa-arrow-left"></i>
+                    返回课程列表
+                </a>
+            </div>
+            
+            <!-- 课程概述 -->
+            <div class="lesson-section">
+                <h2>课程概述</h2>
+                <p>科学上网是每个CS学生必须掌握的基础技能。在当今信息时代，优质的学习资源往往分布在全球各地，而科学上网能够帮助你突破地域限制，获取最前沿的技术信息和学习资料。</p>
+                <p>通过本课程的学习，你将了解科学上网的重要性，掌握基本的设置方法，并学会如何安全、高效地使用这些工具。</p>
+            </div>
+            
+            <!-- 你将能够 -->
+            <div class="lesson-section">
+                <h2>掌握科学上网后，你将能够：</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h4><i class="fab fa-github"></i> 使用 GitHub</h4>
+                        <p>访问全球最大的代码托管平台，查看和下载优质开源项目</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4><i class="fab fa-google"></i> 使用 Google</h4>
+                        <p>避免百度搜索结果的质量问题，获得更准确的技术信息</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4><i class="fab fa-youtube"></i> 浏览 YouTube</h4>
+                        <p>观看高质量的技术教程视频，学习最新的开发技能</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4><i class="fas fa-robot"></i> 使用 AI 工具</h4>
+                        <p>访问 OpenAI、Claude 等先进的大语言模型和 AI 工具</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 学习步骤 -->
+            <div class="lesson-section">
+                <h2>学习步骤</h2>
+                <div class="steps-list">
+                    <h3>按照以下步骤完成科学上网设置：</h3>
+                    <ol>
+                        <li>
+                            <strong>观看教程视频</strong><br>
+                            观看详细的设置教程：<a href="https://www.bilibili.com/video/BV1Aq4y1q7hr/?spm_id_from=333.337.search-card.all.click&vd_source=72297e320b9c9f2a8ce440eed8f502e0" target="_blank">手把手教你流畅访问 GitHub</a>
+                        </li>
+                        <li>
+                            <strong>在 GitHub 搜索相关资料</strong><br>
+                            在 GitHub 搜索栏中搜索 <code>VPN</code> 或 <code>科学上网</code> 等关键词，查找相关资料完成科学上网设置
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- 注意事项 -->
+            <div class="lesson-section">
+                <h2>注意事项</h2>
+                <ul>
+                    <li><strong>安全性：</strong>选择可靠的工具和服务，注意保护个人隐私</li>
+                    <li><strong>合规性：</strong>确保使用目的合法，仅用于学习和研究</li>
+                    <li><strong>稳定性：</strong>选择稳定的服务，避免频繁断线影响学习</li>
+                    <li><strong>成本：</strong>部分服务可能需要付费，但投资学习是值得的</li>
+                </ul>
+            </div>
+            
+            <!-- 下一步 -->
+            <div class="lesson-section">
+                <h2>下一步</h2>
+                <p>完成科学上网设置后，你就可以开始访问全球优质的学习资源了！接下来建议你：</p>
+                <ul>
+                    <li>尝试访问 GitHub，熟悉界面和基本操作</li>
+                    <li>搜索一些感兴趣的开源项目，了解项目结构</li>
+                    <li>使用 Google 搜索技术问题，体验更准确的搜索结果</li>
+                    <li>观看 YouTube 上的技术教程，提升英语听力</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 课程导航 -->
+    <section class="lesson-navigation">
+        <div class="container">
+            <div class="nav-buttons">
+                <a href="../index.html" class="nav-btn prev">
+                    <i class="fas fa-arrow-left"></i>
+                    返回首页
+                </a>
+                <a href="lesson2.html" class="nav-btn next">
+                    下一课：认清大学，认清自己
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 CS 入门指南. 本指南将持续更新，欢迎关注和分享给更多需要的同学。</p>
+            <p><i class="fas fa-heart"></i> 祝你在 CS 的学习道路上越走越远！</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

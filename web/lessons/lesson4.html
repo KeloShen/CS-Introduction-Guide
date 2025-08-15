@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第四课：定向学习优质 CS 课程 - CS 入门指南</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .lesson-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+        
+        .lesson-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .lesson-hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .lesson-content {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .lesson-section {
+            margin-bottom: 3rem;
+        }
+        
+        .lesson-section h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #2d3748;
+            border-left: 4px solid #667eea;
+            padding-left: 1rem;
+        }
+        
+        .lesson-section h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+        
+        .lesson-section p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+        
+        .lesson-section ul, .lesson-section ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .lesson-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+            color: #4a5568;
+        }
+        
+        .lesson-section a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .lesson-section a:hover {
+            text-decoration: underline;
+        }
+        
+        .lesson-navigation {
+            background: #f8fafc;
+            padding: 40px 0;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            max-width: 600px;
+            margin: 0 auto;
+            gap: 1rem;
+        }
+        
+        .nav-btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-btn.prev {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+        
+        .nav-btn.next {
+            background: #667eea;
+            color: white;
+        }
+        
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .back-to-home {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .back-to-home a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .back-to-home a:hover {
+            text-decoration: underline;
+        }
+        
+        .resource-highlight {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            color: #2d3748;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .resource-highlight h3 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+        
+        .resource-highlight .resource-link {
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .resource-highlight .resource-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .comparison-table {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .comparison-table h3 {
+            margin-bottom: 1.5rem;
+            color: #2d3748;
+        }
+        
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .comparison-table th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: #f1f5f9;
+        }
+        
+        .motivation-box {
+            background: #fef5e7;
+            border: 1px solid #f6ad55;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .motivation-box h4 {
+            color: #c05621;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .motivation-box p {
+            color: #c05621;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .lesson-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .comparison-table {
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>CS 入门指南</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">首页</a>
+                <a href="../index.html#courses" class="nav-link">课程</a>
+                <a href="../index.html#about" class="nav-link">关于</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 课程英雄区域 -->
+    <section class="lesson-hero">
+        <div class="container">
+            <h1>第四课：定向学习优质 CS 课程</h1>
+            <p>如果你不满足于仅仅完成学校枯燥的课程，追求的不只是不挂科，那么这里有你需要的答案。</p>
+        </div>
+    </section>
+
+    <!-- 课程内容 -->
+    <section class="lesson-content">
+        <div class="container">
+            <!-- 返回首页链接 -->
+            <div class="back-to-home">
+                <a href="../index.html">
+                    <i class="fas fa-arrow-left"></i>
+                    返回课程列表
+                </a>
+            </div>
+            
+            <!-- 课程概述 -->
+            <div class="lesson-section">
+                <h2>课程概述</h2>
+                <p>很多同学进入大学后会发现，学校的课程往往比较基础，内容可能有些过时，而且教学方式相对传统。如果你有更高的学习目标，不满足于仅仅为了不挂科而学习，那么本课程将为你指明方向。</p>
+                <p>本课程将介绍如何找到最优质的CS学习资源，如何制定个性化的学习计划，以及如何利用这些资源提升自己的技术水平。</p>
+            </div>
+            
+            <!-- 推荐资源 -->
+            <div class="lesson-section">
+                <h2>强烈推荐资源</h2>
+                <div class="resource-highlight">
+                    <h3><i class="fas fa-star"></i> CS 自学指南</h3>
+                    <p>这是一个汇集了每个CS课程最优质学习资源的宝库。每个课程都经过精心筛选，确保质量。</p>
+                    <a href="https://csdiy.wiki/" target="_blank" class="resource-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        访问 CS 自学指南
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 为什么需要优质资源 -->
+            <div class="lesson-section">
+                <h2>为什么需要优质的学习资源？</h2>
+                <div class="comparison-table">
+                    <h3>学校课程 vs 优质资源的对比</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>对比项目</th>
+                                <th>学校课程</th>
+                                <th>优质资源</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>内容更新</strong></td>
+                                <td>更新较慢，可能过时</td>
+                                <td>实时更新，紧跟技术发展</td>
+                            </tr>
+                            <tr>
+                                <td><strong>教学方式</strong></td>
+                                <td>传统讲授，互动较少</td>
+                                <td>多样化教学，互动性强</td>
+                            </tr>
+                            <tr>
+                                <td><strong>实践机会</strong></td>
+                                <td>理论为主，实践较少</td>
+                                <td>理论与实践并重</td>
+                            </tr>
+                            <tr>
+                                <td><strong>学习深度</strong></td>
+                                <td>基础入门，深度有限</td>
+                                <td>从入门到精通</td>
+                            </tr>
+                            <tr>
+                                <td><strong>就业导向</strong></td>
+                                <td>学术导向，就业准备不足</td>
+                                <td>就业导向，实用性强</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- 如何选择学习资源 -->
+            <div class="lesson-section">
+                <h2>如何选择合适的学习资源？</h2>
+                <ul>
+                    <li><strong>看评价：</strong>查看其他学习者的评价和反馈</li>
+                    <li><strong>看更新：</strong>选择更新频率较高的资源</li>
+                    <li><strong>看实践：</strong>优先选择有实践项目的资源</li>
+                    <li><strong>看社区：</strong>选择有活跃社区支持的资源</li>
+                    <li><strong>看认证：</strong>选择有权威机构认证的资源</li>
+                </ul>
+            </div>
+            
+            <!-- 学习建议 -->
+            <div class="lesson-section">
+                <h2>学习建议</h2>
+                <div class="motivation-box">
+                    <h4><i class="fas fa-lightbulb"></i> 重要提醒</h4>
+                    <p>趁着年轻有时间，坚持学习真正有用的知识！大学四年是人生中最重要的时光之一，投资学习就是投资未来。</p>
+                </div>
+                <ul>
+                    <li><strong>制定计划：</strong>根据自己的时间和能力制定合理的学习计划</li>
+                    <li><strong>循序渐进：</strong>不要急于求成，打好基础很重要</li>
+                    <li><strong>实践为主：</strong>多动手实践，理论结合实际</li>
+                    <li><strong>持续学习：</strong>技术发展很快，保持学习的习惯</li>
+                    <li><strong>分享交流：</strong>与同学分享学习心得，互相促进</li>
+                </ul>
+            </div>
+            
+            <!-- 推荐的学习路径 -->
+            <div class="lesson-section">
+                <h2>推荐的学习路径</h2>
+                <ol>
+                    <li><strong>基础阶段：</strong>掌握编程基础、数据结构、算法</li>
+                    <li><strong>进阶阶段：</strong>学习系统设计、网络编程、数据库</li>
+                    <li><strong>专业阶段：</strong>选择感兴趣的方向深入学习</li>
+                    <li><strong>实战阶段：</strong>参与开源项目，积累实战经验</li>
+                </ol>
+            </div>
+            
+            <!-- 下一步 -->
+            <div class="lesson-section">
+                <h2>下一步</h2>
+                <p>现在你已经了解了如何找到优质的学习资源，接下来建议你：</p>
+                <ul>
+                    <li>访问 CS 自学指南，浏览感兴趣的课程</li>
+                    <li>制定自己的学习计划和时间表</li>
+                    <li>开始第一个课程的学习</li>
+                    <li>记录学习进度和心得</li>
+                    <li>与同学分享学习资源</li>
+                </ul>
+                <p>记住，学习是一个持续的过程，不要因为一时的困难而放弃。坚持下去，你一定会看到自己的进步！</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 课程导航 -->
+    <section class="lesson-navigation">
+        <div class="container">
+            <div class="nav-buttons">
+                <a href="lesson3.html" class="nav-btn prev">
+                    <i class="fas fa-arrow-left"></i>
+                    上一课：CS 基础知识
+                </a>
+                <a href="lesson5.html" class="nav-btn next">
+                    下一课：语言学习
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 CS 入门指南. 本指南将持续更新，欢迎关注和分享给更多需要的同学。</p>
+            <p><i class="fas fa-heart"></i> 祝你在 CS 的学习道路上越走越远！</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html> 

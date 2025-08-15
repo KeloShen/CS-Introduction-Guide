@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第三课：CS 基础知识 - CS 入门指南</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .lesson-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+        
+        .lesson-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .lesson-hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .lesson-content {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .lesson-section {
+            margin-bottom: 3rem;
+        }
+        
+        .lesson-section h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #2d3748;
+            border-left: 4px solid #667eea;
+            padding-left: 1rem;
+        }
+        
+        .lesson-section h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+        
+        .lesson-section p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+        
+        .lesson-section ul, .lesson-section ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .lesson-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+            color: #4a5568;
+        }
+        
+        .lesson-section a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .lesson-section a:hover {
+            text-decoration: underline;
+        }
+        
+        .lesson-navigation {
+            background: #f8fafc;
+            padding: 40px 0;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            max-width: 600px;
+            margin: 0 auto;
+            gap: 1rem;
+        }
+        
+        .nav-btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-btn.prev {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+        
+        .nav-btn.next {
+            background: #667eea;
+            color: white;
+        }
+        
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .back-to-home {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .back-to-home a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .back-to-home a:hover {
+            text-decoration: underline;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .tool-item {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+            text-align: center;
+        }
+        
+        .tool-item i {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .tool-item h4 {
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .tool-item p {
+            color: #4a5568;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        
+        .course-highlight {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .course-highlight h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .course-highlight .course-link {
+            background: white;
+            color: #4facfe;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .course-highlight .course-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .why-important {
+            background: #f0fff4;
+            border: 1px solid #9ae6b4;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .why-important h4 {
+            color: #22543d;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .why-important p {
+            color: #22543d;
+            margin: 0;
+        }
+        
+        .learning-path {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .learning-path h3 {
+            margin-bottom: 1.5rem;
+            color: #2d3748;
+        }
+        
+        .learning-path ol {
+            counter-reset: path-counter;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .learning-path li {
+            counter-increment: path-counter;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: relative;
+            padding-left: 3rem;
+        }
+        
+        .learning-path li::before {
+            content: counter(path-counter);
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #667eea;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .lesson-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>CS 入门指南</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">首页</a>
+                <a href="../index.html#courses" class="nav-link">课程</a>
+                <a href="../index.html#about" class="nav-link">关于</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 课程英雄区域 -->
+    <section class="lesson-hero">
+        <div class="container">
+            <h1>第三课：CS 基础知识</h1>
+            <p>学习 Git、Vim、Shell、命令行、SSH 等必备工具，这些是每个程序员都必须掌握的基础技能。</p>
+        </div>
+    </section>
+
+    <!-- 课程内容 -->
+    <section class="lesson-content">
+        <div class="container">
+            <!-- 返回首页链接 -->
+            <div class="back-to-home">
+                <a href="../index.html">
+                    <i class="fas fa-arrow-left"></i>
+                    返回课程列表
+                </a>
+            </div>
+            
+            <!-- 课程概述 -->
+            <div class="lesson-section">
+                <h2>课程概述</h2>
+                <p>对于刚接触计算机的同学来说，Git、Vim、Shell、命令行、SSH 等工具可能都很陌生。这些知识虽然零散，但却是日常工作中必不可少的技能。</p>
+                <p>国内很少有大学专门开设这些工具的课程，但它们是程序员工作的基础。掌握这些工具，你将能够更高效地进行开发工作。</p>
+            </div>
+            
+            <!-- 需要掌握的工具 -->
+            <div class="lesson-section">
+                <h2>需要掌握的工具</h2>
+                <div class="tools-grid">
+                    <div class="tool-item">
+                        <i class="fab fa-git-alt"></i>
+                        <h4>Git</h4>
+                        <p>版本控制系统，管理代码变更</p>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fas fa-terminal"></i>
+                        <h4>Shell</h4>
+                        <p>命令行界面，执行系统命令</p>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fas fa-keyboard"></i>
+                        <h4>Vim</h4>
+                        <p>文本编辑器，快速编辑文件</p>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fas fa-network-wired"></i>
+                        <h4>SSH</h4>
+                        <p>安全连接，远程访问服务器</p>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fas fa-code"></i>
+                        <h4>命令行</h4>
+                        <p>通过命令操作计算机</p>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fas fa-cogs"></i>
+                        <h4>包管理</h4>
+                        <p>安装和管理软件包</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 为什么这些工具重要 -->
+            <div class="lesson-section">
+                <h2>为什么这些工具重要？</h2>
+                <div class="why-important">
+                    <h4><i class="fas fa-info-circle"></i> 重要原因</h4>
+                    <p>这些工具是程序员工作的基础，掌握它们能让你：</p>
+                </div>
+                <ul>
+                    <li><strong>提高工作效率：</strong>命令行操作比图形界面更快</li>
+                    <li><strong>适应工作环境：</strong>大多数服务器都是命令行环境</li>
+                    <li><strong>团队协作：</strong>Git 是团队开发的标准工具</li>
+                    <li><strong>自动化工作：</strong>Shell 脚本可以自动化重复任务</li>
+                    <li><strong>远程工作：</strong>SSH 让你可以远程操作服务器</li>
+                </ul>
+            </div>
+            
+            <!-- 推荐课程 -->
+            <div class="lesson-section">
+                <h2>推荐课程</h2>
+                <div class="course-highlight">
+                    <h3><i class="fas fa-graduation-cap"></i> The Missing Semester</h3>
+                    <p>MIT 开设的专门讲解这些工具的课程，课程内容涵盖了程序员日常工作中最常用但学校很少教授的工具和技能。</p>
+                    <a href="https://missing-semester-cn.github.io/" target="_blank" class="course-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        查看中文版课程笔记
+                    </a>
+                </div>
+                <p><strong>课程特点：</strong></p>
+                <ul>
+                    <li>由 MIT 计算机科学系开设，质量有保障</li>
+                    <li>专门针对学校课程中缺失的工具和技能</li>
+                    <li>有完整的中文翻译版本</li>
+                    <li>包含大量实践练习</li>
+                    <li>完全免费，可以反复学习</li>
+                </ul>
+            </div>
+            
+            <!-- 学习路径 -->
+            <div class="lesson-section">
+                <h2>学习路径</h2>
+                <div class="learning-path">
+                    <h3>建议的学习顺序：</h3>
+                    <ol>
+                        <li>
+                            <strong>Shell 和命令行基础</strong><br>
+                            学习基本的命令操作，如文件管理、进程控制等
+                        </li>
+                        <li>
+                            <strong>Git 版本控制</strong><br>
+                            掌握代码版本管理，学会团队协作
+                        </li>
+                        <li>
+                            <strong>文本编辑器</strong><br>
+                            学习 Vim 或 Emacs 的基本操作
+                        </li>
+                        <li>
+                            <strong>SSH 和远程连接</strong><br>
+                            学会远程访问服务器和文件传输
+                        </li>
+                        <li>
+                            <strong>Shell 脚本编程</strong><br>
+                            编写自动化脚本，提高工作效率
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- 学习资源 -->
+            <div class="lesson-section">
+                <h2>学习资源</h2>
+                <ul>
+                    <li><strong>官方文档：</strong>每个工具都有详细的官方文档</li>
+                    <li><strong>在线教程：</strong>Bilibili、YouTube 等平台有很多教程视频</li>
+                    <li><strong>实践项目：</strong>通过实际项目练习使用这些工具</li>
+                    <li><strong>社区论坛：</strong>Stack Overflow、GitHub 等社区寻求帮助</li>
+                </ul>
+            </div>
+            
+            <!-- 下一步 -->
+            <div class="lesson-section">
+                <h2>下一步</h2>
+                <p>掌握这些基础工具后，你将能够：</p>
+                <ul>
+                    <li>更高效地进行代码开发和管理</li>
+                    <li>适应各种工作环境和操作系统</li>
+                    <li>与团队成员更好地协作</li>
+                    <li>自动化日常的重复性工作</li>
+                    <li>为学习更高级的技术打下基础</li>
+                </ul>
+                <p>记住，这些工具的学习需要大量实践。建议你边学边用，在实际项目中练习这些技能。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 课程导航 -->
+    <section class="lesson-navigation">
+        <div class="container">
+            <div class="nav-buttons">
+                <a href="lesson2.html" class="nav-btn prev">
+                    <i class="fas fa-arrow-left"></i>
+                    上一课：认清大学，认清自己
+                </a>
+                <a href="lesson4.html" class="nav-btn next">
+                    下一课：定向学习优质 CS 课程
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 CS 入门指南. 本指南将持续更新，欢迎关注和分享给更多需要的同学。</p>
+            <p><i class="fas fa-heart"></i> 祝你在 CS 的学习道路上越走越远！</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html> 

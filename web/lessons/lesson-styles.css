@@ -1,0 +1,73 @@
+/* 课程页面特定样式 */
+.lesson-main {
+    padding: 120px 0 80px;
+    background-color: #ffffff;
+}
+
+.lesson-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.lesson-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 1rem;
+}
+
+.lesson-intro {
+    font-size: 1.2rem;
+    color: #718096;
+    margin-bottom: 2.5rem;
+}
+
+.lesson-content h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+}
+
+.lesson-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+}
+
+.lesson-content ul, .lesson-content ol {
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.lesson-content li {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 0.8rem;
+    line-height: 1.8;
+}
+
+.lesson-content a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.lesson-content a:hover {
+    text-decoration: underline;
+    color: #764ba2;
+}
+
+.lesson-navigation {
+    margin-top: 3rem;
+    text-align: center;
+}

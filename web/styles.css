@@ -218,6 +218,16 @@ body {
     padding-left: 1.5rem;
 }
 
+.course-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.course-link:hover {
+    text-decoration: underline;
+}
+
 .course-content li:before {
     content: "✓";
     position: absolute;
@@ -387,6 +397,35 @@ body {
 
 .course-card {
     animation: fadeInUp 0.6s ease-out;
+}
+
+/* 课程操作按钮 */
+.course-actions {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
 .course-card:nth-child(1) { animation-delay: 0.1s; }

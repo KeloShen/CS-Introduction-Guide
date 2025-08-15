@@ -2,6 +2,7 @@
 
 给大一刚入学的Computer Science专业的同学做的入门指南
 
+## 跳转链接：[CS 入门指南](https://keloshen.github.io/CS-Introduction-Guide/web/index)
 ## 📖 项目简介
 
 这是一份专门为刚入学的大学生准备的CS学习指南，帮助你快速适应大学学习生活，掌握必要的技能。
