@@ -160,6 +160,61 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.2);
         }
         
+        /* 工具推荐样式 */
+        .tool-item {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+        
+        .tool-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .tool-item h3 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .tool-item h3 i {
+            color: #667eea;
+        }
+        
+        .tool-item p {
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tool-link {
+            text-align: center;
+        }
+        
+        .tool-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+        }
+        
+        .tool-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            text-decoration: none;
+        }
+        
         @media (max-width: 768px) {
             .lesson-hero h1 {
                 font-size: 2rem;
@@ -250,6 +305,34 @@
                     <li><strong>打破工作循环：</strong>避免陷入低级代码编写的死循环</li>
                     <li><strong>职业晋升：</strong>通过全球经验获得领导信任，实现成长</li>
                 </ul>
+            </div>
+            
+            <!-- 英语学习工具推荐 -->
+            <div class="lesson-section">
+                <h2>英语学习工具推荐</h2>
+                <p>为了帮助你更好地学习英语，这里推荐一些实用的工具和插件：</p>
+                
+                <div class="tool-item">
+                    <h3><i class="fas fa-language"></i> 沉浸式翻译</h3>
+                    <p>对于长篇英文网页、英文PPT等，逐行逐句复制粘贴翻译非常耗时。沉浸式翻译插件可以帮你快速翻译整个页面，大大提高学习效率。</p>
+                    <div class="tool-link">
+                        <a href="https://immersivetranslate.com/" target="_blank" class="tool-button">
+                            <i class="fas fa-external-link-alt"></i>
+                            访问官方网站
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="tool-item">
+                    <h3><i class="fas fa-video"></i> Language Reactor</h3>
+                    <p>观看YouTube视频时，如果官方没有提供优质字幕，或者遇到难懂的英文口音（如印度口音），Language Reactor插件可以提供优质的字幕翻译。此外，你还可以收藏陌生词汇到词库进行复习。</p>
+                    <div class="tool-link">
+                        <a href="https://www.languagereactor.com/" target="_blank" class="tool-button">
+                            <i class="fas fa-external-link-alt"></i>
+                            访问官方网站
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
