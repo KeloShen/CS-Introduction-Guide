@@ -262,6 +262,126 @@ body {
     text-decoration: underline;
 }
 
+/* 美化链接样式 */
+/* .course-description a[href*="survivesjtu.gitbook.io"],
+.course-content a[href*="survivesjtu.gitbook.io"] {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+    border: none;
+    margin: 0 4px;
+} */
+
+.course-description a[href*="survivesjtu.gitbook.io"]:hover,
+.course-content a[href*="survivesjtu.gitbook.io"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    text-decoration: none;
+}
+
+.course-description a[href*="survivesjtu.gitbook.io"]:active,
+.course-content a[href*="survivesjtu.gitbook.io"]:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+/* 美化其他重要链接 */
+.course-description a[href*="survivesjtu.gitbook.io"],
+.course-content a[href*="survivesjtu.gitbook.io"],
+.course-description a[href*="csdiy.wiki"],
+.course-content a[href*="csdiy.wiki"],
+.course-description a[href*="missing-semester-cn.github.io"],
+.course-description a[href*="missing-semester.org"],
+.course-description a[href*="https://www.youtube.com/@MissingSemester"],
+.course-content a[href*="missing-semester-cn.github.io"],
+.course-content a[href*="missing-semester.org"],
+.course-content a[href*="https://www.youtube.com/@MissingSemester"],
+.course-description a[href*="leetcode.cn"],
+.course-content a[href*="leetcode.cn"],
+.course-description a[href*="labuladong.online"],
+.course-content a[href*="labuladong.online"] {
+    display: inline-block !important;
+    background: linear-gradient(135deg, #4872bb 0%, #38a169 100%) !important;
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    padding: 6px 12px !important;
+    border-radius: 6px !important;
+    font-size: 0.85rem !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 6px rgba(72, 187, 120, 0.3) !important;
+    border: none !important;
+    margin: 0 3px !important;
+}
+
+.course-description a[href*="csdiy.wiki"]:hover,
+.course-content a[href*="csdiy.wiki"]:hover,
+.course-description a[href*="missing-semester-cn.github.io"]:hover,
+.course-content a[href*="missing-semester-cn.github.io"]:hover,
+.course-description a[href*="missing-semester.org"]:hover,
+.course-content a[href*="missing-semester.org"]:hover,
+.course-description a[href*="https://www.youtube.com/@MissingSemester"]:hover,
+.course-content a[href*="https://www.youtube.com/@MissingSemester"]:hover,
+.course-description a[href*="leetcode.cn"]:hover,
+.course-content a[href*="leetcode.cn"]:hover,
+.course-description a[href*="labuladong.online"]:hover,
+.course-content a[href*="labuladong.online"]:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(72, 187, 120, 0.4) !important;
+    text-decoration: none !important;
+}
+
+/* 美化GitHub链接 */
+.author-text a[href*="github.com"] {
+    display: inline-block;
+    background: linear-gradient(135deg, #4a51ba 0%, #586069 100%);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(36, 41, 46, 0.3);
+    border: none;
+    margin: 0 4px;
+}
+
+.author-text a[href*="github.com"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(36, 41, 46, 0.4);
+    text-decoration: none;
+}
+
+/* 美化邮箱链接 */
+.author-text a[href^="mailto:"] {
+    display: inline-block;
+    background: linear-gradient(135deg, #3ed2e5 0%, #5ec2d2 100%);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(229, 62, 62, 0.3);
+    border: none;
+    margin: 0 4px;
+}
+
+.author-text a[href^="mailto:"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(229, 62, 62, 0.4);
+    text-decoration: none;
+}
+
 /* 关于部分 */
 .about {
     padding: 80px 0;
@@ -464,4 +584,26 @@ body {
 .course-card:nth-child(3) { animation-delay: 0.3s; }
 .course-card:nth-child(4) { animation-delay: 0.4s; }
 .course-card:nth-child(5) { animation-delay: 0.5s; }
-.course-card:nth-child(6) { animation-delay: 0.6s; } 
+.course-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* 专门针对CS DIY链接的样式，确保优先级 */
+p.course-description a[href*="csdiy.wiki"] {
+    display: inline-block !important;
+    background: linear-gradient(135deg, #4872bb 0%, #38a169 100%) !important;
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    padding: 6px 12px !important;
+    border-radius: 6px !important;
+    font-size: 0.85rem !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 6px rgba(72, 187, 120, 0.3) !important;
+    border: none !important;
+    margin: 0 3px !important;
+}
+
+p.course-description a[href*="csdiy.wiki"]:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(72, 187, 120, 0.4) !important;
+    text-decoration: none !important;
+} 
