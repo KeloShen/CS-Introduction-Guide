@@ -318,6 +318,37 @@ body {
     line-height: 1.6;
 }
 
+/* 作者部分 */
+.author {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.author-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.author-text p {
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.author-text a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.author-text a:hover {
+    text-decoration: underline;
+}
+
+
+
 /* 页脚 */
 .footer {
     background: #2d3748;
